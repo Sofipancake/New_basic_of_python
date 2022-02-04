@@ -27,10 +27,9 @@ def num_translate_adv(value: str, str_out=None) -> str:
         "ten": 'десять'
     }
     if (value[0] in ascii_uppercase) and (value.lower() in num):
-        str_out = f'"{num.get(value.lower(), None).capitalize()}"'
+        print(f'"{num.get(value.lower(), None).capitalize()}"')
     else:
-        str_out = f'"{num.get(value, None)}"'
-    return print(str_out)
+        print(f'"{num.get(value, None)}"')
 
 
 num_translate_adv("one")                #"один"
