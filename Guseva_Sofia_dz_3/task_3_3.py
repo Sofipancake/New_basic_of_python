@@ -24,7 +24,6 @@ def thesaurus(*args) -> dict:
             dict_out.setdefault(el[0],[el])
         else:
             dict_out[el[0]].append(el)
-            dict_out.values.sort
     # результирующий словарь значений
     return dict_out
 
