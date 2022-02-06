@@ -1,0 +1,50 @@
+1) Проверить, установлен ли пакет pillow в глобальном окружении. Если да - зафиксировать версию
+
+C:\Users\User\Desktop\experiment>pip show pillow
+Name: Pillow
+Version: 9.0.0
+Summary: Python Imaging Library (Fork)
+Home-page: https://python-pillow.org
+Author: Alex Clark (PIL Fork Author)
+Author-email: aclark@python-pillow.org
+License: HPND
+Location: c:\users\user\appdata\local\programs\python\python310\lib\site-packages
+Requires:
+Required-by:
+
+*установлен ли пакет requests в глобальном окружении
+C:\Users\User\Desktop\experiment>pip show requests
+WARNING: Package(s) not found: requests
+
+2) Установить самую свежую версию pillow, если ранее она не была установлена
+Version: 9.0.0
+
+3)Создать и активировать виртуальное окружение. Убедиться, что в нем нет пакета pillow
+C:\Users\User\Desktop\experiment>python -m venv .venv
+
+C:\Users\User\Desktop\experiment>".venv/Scripts/activate.bat"
+
+(.venv) C:\Users\User\Desktop\experiment>pip show pillow
+WARNING: Package(s) not found: pillow
+
+(.venv) C:\Users\User\Desktop\experiment>pip show requests
+WARNING: Package(s) not found: requests
+
+4) Установить в виртуальное окружение pillow версии 7.1.1 (или другой, отличной от самой свежей)
+При установке pillow возникла ошибка, установка requests
+
+(.venv) C:\Users\User\Desktop\experiment>pip install requests==2.13
+Collecting requests==2.13
+  Downloading requests-2.13.0-py2.py3-none-any.whl (584 kB)
+     |████████████████████████████████| 584 kB 2.2 MB/s
+Installing collected packages: requests
+Successfully installed requests-2.13.0
+WARNING: You are using pip version 21.2.4; however, version 22.0.3 is available.
+You should consider upgrading via the 'C:\Users\User\Desktop\experiment\.venv\Scripts\python.exe -m pip install --upgrade pip' command.
+
+5) Деактивировать виртуальное окружение.
+
+(.venv) C:\Users\User\Desktop\experiment>deactivate
+C:\Users\User\Desktop\experiment>
+
+
