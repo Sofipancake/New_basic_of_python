@@ -18,20 +18,33 @@ klasses = [
 Доказать, что вы создали именно генератор. Проверить его работу вплоть до истощения. Подумать, в каких ситуациях генератор даст эффект."""
 
 
-tutors = ['Иван', 'Анастасия', 'Петр', 'Сергей', 'Дмитрий', 'Борис', 'Елена']
+tutors = ['Иван', 'Анастасия', 'Петр', 'Сергей', 'Дмитрий', 'Борис', 'Елена', 'Ростислав', 'Виктория']
 klasses = ['9А', '7В', '9Б', '9В', '8Б', '10А', '10Б', '9А']
 
 
 def check_gen(tutors: list, klasses: list):
-    for i in range(len(tutors)):
-        row = []
-        row.append(tutors[i])
-        row.append(klasses[i])
-        yield tuple(row)
+    for name,klass in zip(tutors, klasses):
+        yield name,klass
 
 
+while len(tutors) > len(klasses):
+    klasses.append('None')
 generator = check_gen(tutors, klasses)
 print(type(generator))
 for _ in range(len(tutors)):
     print(next(generator))
 # next(generator)  # если раскомментировать, то должно падать в traceback по StopIteration
+
+# Предыдущее решение (не получилось реализовать None
+#def check_gen(tutors: list, klasses: list):
+#    for i in range(len(tutors)):
+#        row = []
+#        row.append(tutors[i])
+#        row.append(klasses[i])
+#        yield tuple(row)
+
+
+#generator = check_gen(tutors, klasses)
+#print(type(generator))
+#for _ in range(len(tutors)):
+#    print(next(generator))
