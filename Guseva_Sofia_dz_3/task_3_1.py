@@ -25,7 +25,7 @@ def num_translate(value: str) -> str:
         "nine": 'девять',
         "ten": 'десять'
     }
-    str_out = f'"{num.get(value, None)}"'
+    str_out = f'"{num.get(value)}"'
     return str_out
 
 
