@@ -19,7 +19,7 @@ def currency_rates(code: str) -> float:
     """возвращает курс валюты `code` по отношению к рублю"""
     response = requests.get('http://www.cbr.ru/scripts/XML_daily.asp')
     text_url = response.text
-    valute_search = text_url.find(code)
+    valute_search = text_url.find(code)  #Можно добавить .upper для переведения code в верхний регистр
     if valute_search != -1:
         valute_info = text_url[valute_search:text_url.find('</Value>', valute_search)]
         nominal = float(valute_info[valute_info.find('<Nominal>') + 9:valute_info.find('</Nominal>')])
