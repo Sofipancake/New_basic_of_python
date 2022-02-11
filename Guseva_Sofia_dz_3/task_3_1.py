@@ -29,6 +29,6 @@ def num_translate(value: str) -> str:
     return str_out
 
 
-print(num_translate("one"))                         #"один"
-print(num_translate("eight"))                       #"восемь"
-print(num_translate("один"))                        #"None"
+print(num_translate("one"))                         #один
+print(num_translate("eight"))                       #восемь
+print(num_translate("один"))                        #None
