@@ -8,10 +8,9 @@ result = [12, 44, 4, 10, 78, 123]
 
 def get_numbers(src: list):
     """Выводит элементы списка, значения которых больше предыдущего"""
-    for num in range(src[1], len(src)):
-        src
-        yield
-
+    for i, j in zip(src, src[1:]):
+        if j > i:
+            yield j
 
 
 src = [300, 2, 12, 44, 1, 1, 4, 10, 7, 1, 78, 123, 55]
