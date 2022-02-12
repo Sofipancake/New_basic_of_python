@@ -36,4 +36,19 @@ generator = check_gen(tutors, klasses)
 print(type(generator))
 for _ in range(len(tutors)):
     print(next(generator))
-# next(generator)  # если раскомментировать, то должно падать в traceback по StopIteration
+(next(generator))
+
+#<class 'generator'>
+#('Иван', '9А')
+#('Анастасия', '7В')
+#('Петр', '9Б')
+#('Сергей', '9В')
+#('Дмитрий', '8Б')
+#('Борис', '10А')
+#('Елена', '10Б')
+#('Ростислав', '9А')
+#('Виктория', None)
+# Traceback (most recent call last):
+#   File "C:\Users\User\PycharmProjects\New_basic_of_python\Guseva_Sofia_dz_5\task_5_3.py", line 39, in <module>
+#     (next(generator))
+# StopIteration
