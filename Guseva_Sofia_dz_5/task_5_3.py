@@ -23,6 +23,7 @@ klasses = ['9А', '7В', '9Б', '9В', '8Б', '10А', '10Б', '9А']
 
 
 def check_gen(tutors: list, klasses: list):
+"""Генератор, возвращающий кортежи вида (<tutor>, <klass>)"""
     for name,klass in zip(tutors, klasses):
         yield name,klass
 
