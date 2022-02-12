@@ -23,4 +23,8 @@ n = 15
 generator = odd_nums(n)
 for _ in range(1, n + 1, 2):
     print(next(generator))
-# next(generator)  # если раскомментировать, то должно падать в traceback по StopIteration
+next(generator)
+# Traceback (most recent call last):
+#   File "C:\Users\User\PycharmProjects\New_basic_of_python\Guseva_Sofia_dz_5\task_5_1.py", line 26, in <module>
+#     print(next(generator))
+# StopIteration
