@@ -40,10 +40,8 @@ def prepare_dataset(path_users_file: str, path_hobby_file: str) -> dict:
         hobby = []
         for line_users in keys:
             users.append(line_users.replace(',', ' ').strip()) #меняем , на пробелы между фио, избавляемся от ненужных переносов
-            print(users)
         for line_hobby in value:
             hobby.append(line_hobby.strip())
-            print(line_hobby)
     if len(users) < len(hobby):
         sys.exit(1)
 
@@ -55,3 +53,4 @@ dict_out = prepare_dataset('users.csv', 'hobby.csv')
 with open('task_6_3_result.json', 'w', encoding='utf-8') as fw:
     json.dump(dict_out, fw, ensure_ascii=False, indent=2)
     print(dict_out)
+
