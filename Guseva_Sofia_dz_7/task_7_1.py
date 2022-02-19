@@ -13,8 +13,8 @@
 расширять конфигурацию и хранить данные о вложенных папках и файлах
 (добавлять детали)?"""
 
-import os
 
+import os
 
 list = ['my_project', 'my_project/settings', 'my_project/mainapp', 'my_project/adminapp', 'my_project/authapp']
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -23,4 +23,5 @@ for dir in list:
     if not os.path.exists(dir_path):
        os.makedirs(dir_path)
 
-# Конфигурацию лучше хранить в отдельном файле и читать из файла
+# Конфигурацию лучше хранить в отдельном файле и читать из файла, если перед названием директории в файле будет отступ,
+# тогда менять этот отступ на my_project/
