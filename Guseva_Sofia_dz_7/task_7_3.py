@@ -20,10 +20,8 @@ import shutil
 
 base_dir = 'my_project'
 
-
 list = []
 path_f = []
-
 
 for d, dirs, files in os.walk(base_dir):
     for dir in dirs:
@@ -40,21 +38,3 @@ if not os.path.exists(dir_path):
 
 for source in path_f:
     shutil.copytree(source, dir_path, dirs_exist_ok=True)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
