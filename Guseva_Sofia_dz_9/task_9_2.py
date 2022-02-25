@@ -18,8 +18,8 @@ class Road:
         :param length: длинна в метрах
         :param width: ширина в метрах
         """
-        self.length = length
-        self.width = width
+        self._length = length
+        self._width = width
 
     def calculate(self, height: int = 5, mass_m_2: int = 25) -> int:
         """
@@ -28,7 +28,7 @@ class Road:
         :param mass_m_2: масса в кг квадратного метра дороги высотой 1 см
         :return: int значение тонн, дробная часть если есть НЕ учитывается
         """
-        mass_asph = int((self.length * self.width * height * mass_m_2) / 1000)
+        mass_asph = int((self._length * self._width * height * mass_m_2) / 1000)
         return mass_asph
 
 
