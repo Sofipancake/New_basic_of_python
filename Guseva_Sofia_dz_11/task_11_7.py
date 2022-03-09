@@ -9,7 +9,7 @@
 
 class Complexdigit:
 
-    def __init__(self, re, im):
+    def __init__(self, re, im : float):
         self.re = re
         self.im = im
 
@@ -33,3 +33,7 @@ if __name__ == '__main__':
     b = Complexdigit(-22, 0)
     print(a + b)        #Сумма комплексных чисел равна: -17+-9*i
     print(a * b)        #Произведение комплексных чисел равно: -110+198*i
+    a = Complexdigit(5.0, -9)
+    b = Complexdigit(-22.5, 0.8)
+    print(a + b)        #Сумма комплексных чисел равна: -17.5+-8.2*i
+    print(a * b)        #Произведение комплексных чисел равно: -105.3+206.5*i
